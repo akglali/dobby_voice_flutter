@@ -21,7 +21,7 @@ class _VoiceChatPageState extends State<VoiceChatPage> {
   bool _speechAvailable = false;
   bool _listening = false;
   bool _sending = false;
-  bool _conversation = false; // <-- NEW: hands-free loop mode
+  bool _conversation = false; // conversation mode on/off
 
   String _heard = '';
   Conversation? _convo;
