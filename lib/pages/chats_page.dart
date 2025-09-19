@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../services/chat_store.dart';
 import '../models/conversation.dart';
 import 'voice_chat_page.dart';
@@ -16,6 +17,12 @@ class _ChatsPageState extends State<ChatsPage> {
   void initState() {
     super.initState();
     _load();
+  }
+
+  String fmtShort(DateTime dt) {
+    // 24-hour: 2025-09-19 12:33
+    return DateFormat('yyyy-MM-dd HH:mm').format(dt.toLocal());
+    // Or 12-hour: return DateFormat('yyyy-MM-dd h:mm a').format(dt.toLocal());
   }
 
   void _load() => setState(() => _convos = ChatStore.I.list());
@@ -58,7 +65,7 @@ class _ChatsPageState extends State<ChatsPage> {
                   child: ListTile(
                     title: Text(c.title),
                     subtitle: Text(
-                      '${c.messages.length} messages • ${c.updatedAt}',
+                      '${c.messages.length} messages • ${fmtShort(c.updatedAt)}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
