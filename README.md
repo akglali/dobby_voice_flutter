@@ -1,6 +1,10 @@
-# dobby_voice
+# dobby_voice_chat
 
-A new Flutter project.
+In this app, I used flutter to let people talk with Dobby in voice chat.
+
+[For back-end click it ](https://github.com/akglali/dobby_voice_api)
+
+[Click the donwload the apk to try iy on your ANDROID phone.](https://drive.google.com/file/d/16Ig2b-CPcSdIJ4Wfmt0IITgSyuREojQz/view?usp=sharing)
 
 ## Getting Started
 
